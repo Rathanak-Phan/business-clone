@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 96px;
+  width: 100%;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+
+.logo a img {
+  width: 200px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navigation {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  color: rgb(99, 145, 231);
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Bokor", system-ui;
+}
+
+.navbar a:hover {
+  color: red;
+  transition: 0.5s;
+}
+
+.language img {
+  width: 100px;
+}
+
+.menu {
+  display: none;
+}
+
+.header div p span {
+  font-size: 40px;
+}
+
+@media (width < 1024px) {
+  .navbar {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .logo a img {
+    width: 150px;
+  }
+
+  .language img {
+    width: 60px;
+  }
+
+  .header {
+    padding: 0 10px;
+  }
+}
+
+.hero-section {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("assets/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.hero-content {
+  width: 800px;
+  height: 300px;
+  margin-left: 50px;
+  position: relative;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+@media (width < 1024px) {
+  .hero-content {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    position: relative;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    overflow: hidden;
+  }
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+.hero-content::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: gray;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-family: "Bokor", system-ui;
+}
+
+.hero-content p {
+  font-family: "Bokor", system-ui;
+}
+
+.hero-content .button {
+  width: 150px;
+  padding: 5px 20px;
+  background-color: brown;
+  border-radius: 50px;
+  text-decoration: none;
+  color: aliceblue;
+  font-family: "Bokor", system-ui;
+}
+
+.hero-content .button:hover {
+  background-color: blue;
+  transition: 0.5s;
+}
+
+.search-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (width < 768px) {
+  .search-container{
+    height: 400px;
+  }
+}
+
+.search-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  background-image: url("assets/search-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.search-content {
+  width: 500px;
+  height: auto;
+  display: flex;
+  background-color: aliceblue;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+}
+
+.search-content .search-bar {
+  width: 80%;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  padding: 0px 30px;
+  font-size: 18px;
+  font-family: "Bokor", system-ui;
+
+}
+
+.search-content button {
+  width: 20%;
+  height: 60px;
+  border-radius: 30px;
+  background-color: brown;
+  border: none;
+  font-size: 18px;
+  font-family: "Bokor", system-ui;
+
+}
+
+@media (max-width: 768px) {
+  .search-container .search-content {
+    width: 95%;
+    height: auto;
+    display: block;
+    background-color: transparent;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+  }
+
+  .search-content .search-bar {
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    padding: 0px 30px;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .search-content button {
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    background-color: brown;
+    border: none;
+    font-size: 20px;
+  }
+}
+
+.discription{
+  position: absolute;
+  z-index: 2;
+  bottom: 70px;
+  padding: 20px;
+}
+
+.discription p{
+  font-size: 16px;
+  font-family: "Bokor", system-ui;
+
+}
+
+@media (width < 768px) {
+  .discription{
+  position: absolute;
+  z-index: 2;
+  bottom: 30px;
+}
+}
