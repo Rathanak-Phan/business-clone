@@ -42,7 +42,7 @@
 }
 
 .language img {
-  width: 100px;
+  width: 50px;
 }
 
 .menu {
@@ -178,7 +178,7 @@
 }
 
 @media (width < 768px) {
-  .search-container{
+  .search-container {
     height: 400px;
   }
 }
@@ -216,7 +216,6 @@
   padding: 0px 30px;
   font-size: 18px;
   font-family: "Bokor", system-ui;
-
 }
 
 .search-content button {
@@ -227,7 +226,6 @@
   border: none;
   font-size: 18px;
   font-family: "Bokor", system-ui;
-
 }
 
 @media (max-width: 768px) {
@@ -262,23 +260,73 @@
   }
 }
 
-.discription{
+.discription {
   position: absolute;
   z-index: 2;
   bottom: 70px;
   padding: 20px;
 }
 
-.discription p{
+.discription p {
   font-size: 16px;
   font-family: "Bokor", system-ui;
-
 }
 
 @media (width < 768px) {
-  .discription{
-  position: absolute;
-  z-index: 2;
-  bottom: 30px;
+  .discription {
+    position: absolute;
+    z-index: 2;
+    bottom: 30px;
+  }
 }
+
+.start-search {
+  width: 100%;
+  height: auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.start-search h2 {
+  text-align: center;
+  font-family: "Bokor", system-ui;
+}
+
+.start-search .card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 250px;
+  gap: 20px;
+}
+
+@media (width < 1024px) {
+  .start-search .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    gap: 15px;
+  }
+
+  .start-search{
+    padding: 20px;
+  }
+}
+
+@media (width < 576px) {
+  .start-search .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 250px 250px 250px;
+    gap: 15px;
+  }
+  .start-search{
+    padding: 15px;
+  }
+}
+
+.card-container .card {
+  box-shadow: 0px 0px 10px gray;
+  border-radius: 10px;
 }
